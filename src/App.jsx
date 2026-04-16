@@ -1,13 +1,18 @@
-//Home, Header 가져오기
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./components/Header";
+import ProductDetail from "./pages/ProductDetail";
 
 function App(){
   return (
-    <div>
-      <Header/>
-      <Home/>
-    </div>
+    <BrowserRouter>
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product/:id" element={ProductDetail} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
