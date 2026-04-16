@@ -1,4 +1,8 @@
 //Home = 메인 화면
+import products from "../data/products";
+import ProductCard from "../components/ProductCard";
+
+
 function Home(){
     return (
         <div>
