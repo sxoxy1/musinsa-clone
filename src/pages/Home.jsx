@@ -11,10 +11,19 @@ function Home(){
                 <h1 style={styles.title}>2026 SUMMER</h1>
                 <p style={styles.subtitle}>지금 가장 인기 있는 스타일</p>
             </div>
-            {/* 인기 상품 섹션 (상품 카드 들어갈 자리) */}
+            {/* 인기 상품 영역 */}
             <div style={styles.section}>
                 <h2 style={styles.sectionTitle}>인기상품</h2>
-                <p style={styles.sectionText}>상품 카드 들어올 예정</p>
+                
+                <div style={{display: "flex", gap: "20px"}}>
+                    {products.map((item)=>(  //products 배열 안에 있는걸 하나씩 꺼내서 아래 코드 실행
+                        <ProductCard //카드 하나 생성
+                        key={item.id} //고유값
+                        name={item.name}
+                        price={item.price}
+                        />
+                    ))}
+                </div>
             </div>
             {/* 스타일 추천 섹션 (나중에 필터/추천 기능 들어갈 자리) */}
             <div style={styles.section}>
