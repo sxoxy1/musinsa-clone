@@ -19,6 +19,7 @@ function Home(){
                     {products.map((item)=>(  //products 배열 안에 있는걸 하나씩 꺼내서 아래 코드 실행
                         <ProductCard //카드 하나 생성
                         key={item.id} //고유값
+                        id={item.id}
                         brand={item.brand}
                         name={item.name}
                         price={item.price}

@@ -1,9 +1,14 @@
+import {useNavigate} from "react-router-dom";
+
+
 // 상품 카드 하나
 function ProductCard(props){
+    const navigate = useNavigate();
     return(
         <div
             //마우스 올리면 커짐
             style={styles.card}
+            onClick={() => navigate(`/product/${props.id}`)} //클릭시 상세 페이지 이동
             onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "scale(1.03";
             }}
