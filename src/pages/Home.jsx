@@ -60,7 +60,8 @@ const styles = {
         color: "#666",
     },
     productList: {
-        display: "flex",
+        display: "grid",
+        gridTemplateColumns: "repeat(4, 1fr)",
         gap: "20px",
     },
 };
