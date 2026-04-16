@@ -15,12 +15,14 @@ function Home(){
             <div style={styles.section}>
                 <h2 style={styles.sectionTitle}>인기상품</h2>
                 
-                <div style={{display: "flex", gap: "20px"}}>
+                <div style={styles.productList}>
                     {products.map((item)=>(  //products 배열 안에 있는걸 하나씩 꺼내서 아래 코드 실행
                         <ProductCard //카드 하나 생성
                         key={item.id} //고유값
+                        brand={item.brand}
                         name={item.name}
                         price={item.price}
+                        image={item.image}
                         />
                     ))}
                 </div>
@@ -56,6 +58,10 @@ const styles = {
     sectionText: {
         fontSize: "15px",
         color: "#666",
+    },
+    productList: {
+        display: "flex",
+        gap: "20px",
     },
 };
 
