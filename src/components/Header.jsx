@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 //Hear = 사이트 맨 위 상단 영역
 function Header(){
     return(
@@ -7,11 +9,11 @@ function Header(){
 
             {/* 가운데 메뉴 */}
             <nav style={styles.nav}>
-                <span style={styles.menu}>추천</span>
-                <span style={styles.menu}>상의</span>
-                <span style={styles.menu}>하의</span>
-                <span style={styles.menu}>신발</span>
-                <span style={styles.menu}>가방</span>
+                <Link to="/products" style={styles.menu}>추천</Link>
+                <Link to="/products" style={styles.menu}>상의</Link>
+                <Link to="/products" style={styles.menu}>하의</Link>
+                <Link to="/products" style={styles.menu}>신발</Link>
+                <Link to="/products" style={styles.menu}>가방</Link>
             </nav>
             {/* 오른쪽 유저 메뉴 */}
             <div style={styles.userMenu}>
@@ -28,7 +30,7 @@ const styles ={
     header: {
         display: "flex", //가로 정렬
         justifyContent: "space-between",
-        alignItem: "center", //세로 가운데 정렬
+        alignItems: "center", //세로 가운데 정렬
         padding: "20px 40px",
         borderBottom: "1px solid #e5e5e5",
         backgroundColor: "#ffffff",
@@ -51,7 +53,7 @@ const styles ={
     },
     userItem: {
         fontSize: "14px",
-        cursor: "poiner",
+        cursor: "pointer",
     },
 };
 
