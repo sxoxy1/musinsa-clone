@@ -24,25 +24,55 @@ function Products() {
         {/* 카테고리 버튼*/}
         <div style={styles.categoryBar}>
             <button
-                style={styles.categoryButton}
-                onClick={() => setSelectedCategory("전체")}>전체
+               style={
+                selectedCategory === "전체"
+                ? styles.activeCategoryButton
+                : styles.categoryButton
+               }
+               onClick={() => setSelectedCategory("전체")}
+            >
+                전체
             </button>
             <button
-                style={styles.categoryButton}
-                onClick={() => setSelectedCategory("상의")}>상의
+               style={
+                selectedCategory === "상의"
+                ? styles.activeCategoryButton
+                : styles.categoryButton
+               }
+               onClick={() => setSelectedCategory("상의")}
+            >
+                상의
             </button>
             <button
-                style={styles.categoryButton}
-                onClick={() => setSelectedCategory("하의")}>하의
+               style={
+                selectedCategory === "하의"
+                ? styles.activeCategoryButton
+                : styles.categoryButton
+               }
+               onClick={() => setSelectedCategory("하의")}
+            >
+                하의
             </button>
             <button
-                style={styles.categoryButton}
-                onClick={() => setSelectedCategory("신발")}>신발
+               style={
+                selectedCategory === "신발"
+                ? styles.activeCategoryButton
+                : styles.categoryButton
+               }
+               onClick={() => setSelectedCategory("신발")}
+            >
+                신발
             </button>
             <button
-                style={styles.categoryButton}
-                onClick={() => setSelectedCategory("가방")}>가방
-            </button> 
+               style={
+                selectedCategory === "가방"
+                ? styles.activeCategoryButton
+                : styles.categoryButton
+               }
+               onClick={() => setSelectedCategory("가방")}
+            >
+                가방
+            </button>
         </div>
         {/* 선택된 카테고리 표시 */}
         <p style={styles.categoryText}>
@@ -83,6 +113,13 @@ const styles = {
     border: "1px solid #ddd",
     backGroundColor: "#fff",
     curor: "pointer",
+  },
+  activeCategoryButton: {
+    padding: "10px 16px",
+    border: "1px solid #000",
+    backgroundColor: "#000",
+    color: "#fff",
+    cursor: "pointer",
   },
   categoryText: {
     marginBottom: "20px",
