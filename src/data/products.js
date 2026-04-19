@@ -6,6 +6,7 @@ const products =[
         name: "오버핏 반팔티",
         price: 19900,
         image: "https://placehold.co/300x360?text=T-SHIRT",
+        category: "상의",
     },
     {
         id: 2,
@@ -13,6 +14,7 @@ const products =[
         name: "와이드 데님 팬츠",
         price: 39000,
         image: "https://placehold.co/300x360?text=DENIM",
+        category: "하의",
     },
     {
         id: 3,
@@ -20,6 +22,7 @@ const products =[
         name: "스니커즈",
         price: 59000,
         image: "https://placehold.co/300x360?text=SNEAKERS",
+        category: "신발",
     },
 ];
 
