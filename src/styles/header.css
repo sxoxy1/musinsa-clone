@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #ffffff;
+}
+.header-logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+.header-nav {
+    display: flex;
+    gap: 24px;
+}
+.header-menu {
+    font-size: 16px;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+}
+.header-user-menu {
+    display: flex;
+    gap: 16px;
+}
+.header-user-item {
+    font-size: 14px;
+    cursor: pointer;
+}

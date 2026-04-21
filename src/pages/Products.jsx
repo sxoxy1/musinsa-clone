@@ -1,5 +1,5 @@
-//Home 재사용
 // 상품 목록 페이지
+import "../styles/products.css";
 import { useState } from "react";
 import products from "../data/products";
 import ProductCard from "../components/ProductCard";
@@ -31,83 +31,83 @@ function Products() {
         sortedProducts.sort((a, b) => b.price - a.price);
     }
     return (
-        <div style={styles.container}>
-        <h1 style={styles.title}>전체 상품</h1>
+        <div className="products-container">
+        <h1 className="products-title">전체 상품</h1>
         {/* 카테고리 버튼*/}
-        <div style={styles.categoryBar}>
+        <div className="category-bar">
             <button
-               style={
+               className={
                 selectedCategory === "전체"
-                ? styles.activeCategoryButton
-                : styles.categoryButton
+                ? "active-category-button"
+                : "category-button"
                }
                onClick={() => setSelectedCategory("전체")}
             >
                 전체
             </button>
             <button
-               style={
+               className={
                 selectedCategory === "상의"
-                ? styles.activeCategoryButton
-                : styles.categoryButton
+                ? "active-category-button"
+                : "category-button"
                }
                onClick={() => setSelectedCategory("상의")}
             >
                 상의
             </button>
             <button
-               style={
+               className={
                 selectedCategory === "하의"
-                ? styles.activeCategoryButton
-                : styles.categoryButton
+                ? "active-category-button"
+                : "category-button"
                }
                onClick={() => setSelectedCategory("하의")}
             >
                 하의
             </button>
             <button
-               style={
+               className={
                 selectedCategory === "신발"
-                ? styles.activeCategoryButton
-                : styles.categoryButton
+                ? "active-category-button"
+                : "category-button"
                }
                onClick={() => setSelectedCategory("신발")}
             >
                 신발
             </button>
             <button
-               style={
+               className={
                 selectedCategory === "가방"
-                ? styles.activeCategoryButton
-                : styles.categoryButton
+                ? "active-category-button"
+                : "category-button"
                }
                onClick={() => setSelectedCategory("가방")}
             >
                 가방
             </button>
         </div>
-        <div style={styles.sortBar}>
+        <div className="sort-bar">
             <button
-                style={sortType === "기본순" ? styles.activeCategoryButton : styles.categoryButton}
+                className={sortType === "기본순" ? "active-category-button" : "category-button"}
                 onClick={() => setSortType("기본순")}
             >
                 기본순
             </button>
             <button
-                style={sortType === "낮은 가격순" ? styles.activeCategoryButton : styles.categoryButton}
+                className={sortType === "낮은 가격순" ? "active-category-button" : "category-button"}
                 onClick={() => setSortType("낮은 가격순")}
             >
                 낮은 가격순
             </button>
             <button
-                style={sortType === "높은 가격순" ? styles.activeCategoryButton : styles.categoryButton}
+                className={sortType === "높은 가격순" ? "active-category-button" : "category-button"}
                 onClick={() => setSortType("높은 가격순")}
             >
                 높은 가격순
             </button>
         </div>
         {/* 선택된 카테고리 표시 */}
-        <p style={styles.categoryText}>
+        <p className="category-text">
             현재 선택: {selectedCategory}
         </p>
         {/* 상품 목록 */}
@@ -116,9 +116,9 @@ function Products() {
             아니면 기존 카드 출력
          */}
         {sortedProducts.length === 0 ?(
-            <p style={styles.emptyText}>해당 카테고리의 상품이 없습니다</p>
+            <p className="empty-text">해당 카테고리의 상품이 없습니다</p>
         ) : (
-            <div style={styles.productList}>
+            <div className="products-list">
                 {sortedProducts.map((item) => (
                     <ProductCard
                         key={item.id}
@@ -134,52 +134,5 @@ function Products() {
     </div>
     );
 }
-
-const styles = {
-  container: {
-    padding: "40px",
-  },
-  title: {
-    fontSize: "28px",
-    marginBottom: "20px",
-  },
-  categoryBar: {
-    display: "flex",
-    gap: "12px",
-    marginBotton: "30px",
-  },
-  sortBar: {
-    display: "flex",
-    gap: "12px",
-    marginBottom: "20px",
-  },
-  categoryButton: {
-    padding: "10px 16px",
-    border: "1px solid #ddd",
-    backgroundColor: "#fff",
-    cursor: "pointer",
-  },
-  activeCategoryButton: {
-    padding: "10px 16px",
-    border: "1px solid #000",
-    backgroundColor: "#000",
-    color: "#fff",
-    cursor: "pointer",
-  },
-  categoryText: {
-    marginBottom: "20px",
-    color: "#666",
-  },
-  emptyText: {
-    color: "#666",
-    fontSize: "16px",
-    padding: "20px 0",
-  },
-  productList: {
-    display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
-    gap: "20px",
-  },
-};
 
 export default Products;
