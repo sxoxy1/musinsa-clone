@@ -10,6 +10,10 @@
     font-size: 28px;
     font-weight: bold;
 }
+.header-logo-link {
+    text-decoration: none;
+    color: inherit;
+}
 .header-nav {
     display: flex;
     gap: 24px;
@@ -20,6 +24,9 @@
     color: #000;
     text-decoration: none;
 }
+.header-menu:hover {
+    color: #666;
+}
 .header-user-menu {
     display: flex;
     gap: 16px;
@@ -27,4 +34,7 @@
 .header-user-item {
     font-size: 14px;
     cursor: pointer;
+}
+.header-user-item:hover {
+    color: #666;
 }

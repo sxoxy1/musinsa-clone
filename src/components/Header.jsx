@@ -6,8 +6,9 @@ function Header(){
     return(
         <header className="header">
             {/* 왼쪽 로고 */}
+           <Link to="/" className="header-logo-link">
             <div className="header-logo">MUSIT</div>
-
+           </Link>
             {/* 가운데 메뉴 */}
             <nav className="header-nav">
                 <Link to="/products" className="header-menu">추천</Link>
